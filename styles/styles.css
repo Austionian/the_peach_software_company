@@ -1,0 +1,20 @@
+/* This file creates your base css that Tailwind will honor. */
+@import "tailwindcss";
+@config "../tailwind.config.js"
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  @media screen and (min-width: 640px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}

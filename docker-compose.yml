@@ -1,0 +1,6 @@
+services:
+  web:
+    image: oxidized:latest
+    ports:
+      - "8000:80"
+    platform: linux/arm64
