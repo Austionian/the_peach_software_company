@@ -1,6 +1,12 @@
 /* This file creates your base css that Tailwind will honor. */
 @import "tailwindcss";
-@config "../tailwind.config.js"
+
+@theme {
+  --color-primary-400: oklch(0.82 0.11 356.9);
+  --color-primary-500: oklch(0.74 0.14 358.14);
+
+  --color-secondary-500: oklch(0.72 0.1 261.44);
+}
 
 @layer base {
   html {

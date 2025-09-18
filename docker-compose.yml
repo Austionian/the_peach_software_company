@@ -1,6 +1,6 @@
 services:
   web:
-    image: oxidized:latest
+    image: the_peach:latest
     ports:
-      - "8000:80"
+      - "8765:80"
     platform: linux/arm64
