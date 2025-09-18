@@ -3,4 +3,3 @@ services:
     image: the_peach:latest
     ports:
       - "8765:80"
-    platform: linux/arm64

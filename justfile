@@ -61,9 +61,15 @@ build:
 docker-build:
     docker buildx build --platform linux/arm64/v8 --tag the_peach --file Dockerfile .
 
+docker-build-local:
+    docker buildx build --platform linux/amd64 --tag the_peach --file Dockerfile .
+
 docker-deploy:
     DOCKER_HOST="ssh://austin@cluster.local" docker compose up -d
 
 # Builds the new images, saves it to the pi, remotely starts it up with docker compose
 deploy:
      just build && just docker-build && docker save the_peach | bzip2 | ssh austin@cluster.local docker load && just docker-deploy
+
+deploy-local:
+    just build && just docker-build-local && docker compose up -d
