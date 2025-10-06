@@ -2,9 +2,19 @@
 <div
   class="flex flex-col items-center align-middle justify-center h-screen text-center"
 >
-  <div class="bg-white/5 rounded-2xl">
+<img
+  src="{{ get_url(path="assets/pip_headshot.png") | safe }}" 
+  alt="headshot of a dog smiling"
+  class="h-[105px] relative top-[130px] left-[-215px] z-0 rotate-[325deg]"
+/>
+<img
+  src="{{ get_url(path="assets/theo_headshot.png") | safe }}" 
+  alt="headshot of a dog smiling"
+  class="h-[110px] relative top-6 left-[225px] z-0 rotate-[20deg]"
+/>
+  <div class="bg-pink-500/5 rounded-2xl z-10">
     <h1 class="font-mono font-bold text-lg sm:text-xl uppercase p-4">
-      The Peach Software Company <span class="animate-pulse">🍑</span>
+      The Peach Software Company
     </h1>
   </div>
   <!-- <div class="mt-16 flex flex-col sm:flex-row justify-between w-full max-w-56"> -->
@@ -12,9 +22,9 @@
     <div>
       <a href="mailto:austin@r00ks.io">
         <button
-          class="inline-block cursor-pointer rounded-md px-4 py-3 text-center font-semibold transition duration-200 ease-in-out bg-white/5 hover:bg-white/10 text-sm blur-xs hover:blur-none hover:scale-110"
+          class="inline-block cursor-pointer rounded-md px-4 py-3 text-center font-semibold transition duration-200 ease-in-out bg-pink-500/5 hover:bg-pink-500/10 text-sm blur-xs hover:blur-none hover:scale-110"
         >
-          GOT JUICE?
+          GOT <span class="animate-pulse">🍑</span>?
         </button></a
       >
     </div>
