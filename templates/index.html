@@ -1,33 +1,33 @@
 {% extends "base.html" %} {% block content %}
 <div
-  class="flex flex-col items-center align-middle justify-center h-screen text-center"
+  class="flex flex-col items-center align-middle justify-center h-screen text-center overflow-hidden"
 >
-<div class="group">
-<img
-  src="{{ get_url(path="assets/pip_headshot.png") | safe }}" 
-  alt="headshot of a dog smiling"
-  class="h-[105px] relative top-[120px] md:top-[130px] left-[-45px] md:left-[-105px] z-0 rotate-[345deg] md:rotate-[325deg] group-hover:rotate-[400deg] transition"
-/>
-<img
-  src="{{ get_url(path="assets/theo_headshot.png") | safe }}" 
-  alt="headshot of a cat staring"
-  class="h-[110px] relative top-1 md:top-2 left-56 md:left-80 z-0 rotate-[20deg] group-hover:rotate-[-40deg] transition"
-/>
-  <div class="bg-pink-500/5 group-hover:scale-110 group-hover:bg-pink-500/10 transition rounded-2xl z-10">
-    <h1 class="font-mono font-bold text-lg md:text-xl uppercase p-4">
-      The Peach Software Company
-    </h1>
-  </div>
-<p class="text-sm mt-2">est 2021</p>
-  <div class="mt-10 flex flex-col justify-between">
-      <a href="mailto:austin@r00ks.io">
-        <button
-          class="ring-1 ring-pink-500/20 group-hover:ring-pink-500/30 inline-block cursor-pointer rounded-md px-4 py-3 text-center font-semibold transition duration-200 ease-in-out bg-pink-500/5 hover:bg-pink-500/10 text-sm blur-xs hover:blur-none hover:scale-110"
+  <div class="group">
+    <img
+      src="{{ get_url(path="assets/pip_headshot.png") | safe }}" 
+      alt="headshot of a dog smiling"
+      class="h-[105px] relative top-[110px] md:top-[130px] left-[-35px] md:left-[-105px] z-0 rotate-[350deg] md:rotate-[325deg] group-hover:rotate-[400deg] transition"
+    />
+    <img
+      src="{{ get_url(path="assets/theo_headshot.png") | safe }}" 
+      alt="headshot of a cat staring"
+      class="h-[110px] relative top-1 md:top-2 left-56 md:left-80 z-0 rotate-[20deg] group-hover:rotate-[-40deg] transition"
+    />
+    <div class="bg-pink-500/5 group-hover:scale-110 group-hover:bg-pink-500/10 transition rounded-2xl z-10">
+      <h1 class="font-mono font-bold text-lg md:text-xl uppercase p-4">
+        The Peach Software Company
+      </h1>
+    </div>
+    <p class="text-sm mt-2">est 2021</p>
+    <div class="mt-10 flex flex-col justify-between">
+        <a href="mailto:austin@r00ks.io">
+          <button
+            class="ring-1 ring-pink-500/20 group-hover:ring-pink-500/30 inline-block cursor-pointer rounded-md px-4 py-3 text-center font-semibold transition duration-200 ease-in-out bg-pink-500/5 hover:bg-pink-500/10 text-sm blur-xs hover:blur-none hover:scale-110"
+          >
+            GOT <span class="animate-pulse">🍑</span>?
+          </button></a
         >
-          GOT <span class="animate-pulse">🍑</span>?
-        </button></a
-      >
+    </div>
   </div>
-</div>
 </div>
 {% endblock content %}
