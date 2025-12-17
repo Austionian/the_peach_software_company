@@ -1,0 +1,84 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: the-peach-software-company
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: the-peach-software-company
+  template:
+    metadata:
+      labels:
+        app: the-peach-software-company
+    spec:
+      containers:
+        - name: the-peach-software-company
+          image: 10.108.202.38:5000/the_peach:0.1.0
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: the-peach-software-company
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: the-peach-software-company-ingress
+  annotations:
+    cert-manager.io/issuer: "letsencrypt-prod"
+    # Rate limiting - 10 requests per second per IP
+    nginx.ingress.kubernetes.io/limit-rps: "10"
+    # Connection limiting - max 5 concurrent connections per IP
+    nginx.ingress.kubernetes.io/limit-connections: "5"
+    # Burst allowance (temporary spike allowance)
+    nginx.ingress.kubernetes.io/limit-burst-multiplier: "2"
+    # Whitelist for rate limiting (optional - comma separated IPs/CIDRs)
+    # nginx.ingress.kubernetes.io/limit-whitelist: "10.0.0.0/8,192.168.1.100"
+
+    # IP whitelist (only allow these IPs)
+    # nginx.ingress.kubernetes.io/whitelist-source-range: "10.0.0.0/8,192.168.1.0/24"
+
+    # CORS (if needed)
+    # nginx.ingress.kubernetes.io/enable-cors: "true"
+    # nginx.ingress.kubernetes.io/cors-allow-origin: "https://gathering.surf"
+    # nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, OPTIONS"
+
+    # Basic auth (simple protection for staging/dev)
+    # nginx.ingress.kubernetes.io/auth-type: basic
+    # nginx.ingress.kubernetes.io/auth-secret: basic-auth
+    # nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required'
+
+    # Custom backend timeout
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "5"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "60"
+    # SSL redirect
+    # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # Custom error pages
+    nginx.ingress.kubernetes.io/custom-http-errors: "403,404,500,502,503"
+    nginx.ingress.kubernetes.io/default-backend: custom-error-pages
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - thepeachsoftware.company
+      secretName: the-peach-software-company-tls
+  rules:
+    - host: thepeachsoftware.company
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: the-peach-software-company
+                port:
+                  number: 80
