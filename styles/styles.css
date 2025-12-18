@@ -6,6 +6,59 @@
   --color-primary-500: oklch(0.74 0.14 358.14);
 
   --color-secondary-500: oklch(0.72 0.1 261.44);
+  --animate-first: color 1s ease-in-out infinite;
+  --animate-second: color 1.1s ease-in-out infinite;
+  --animate-third: color 1.2s ease-in-out infinite;
+  --animate-fourth: color 1.3s ease-in-out infinite;
+  --animate-fifth: color 1.4s ease-in-out infinite;
+  --animate-sixth: color 1.5s ease-in-out infinite;
+  --animate-seventh: color 1.6s ease-in-out infinite;
+  --animate-eigth: color 1.7s ease-in-out infinite;
+  --animate-ninth: color 1.8s ease-in-out infinite;
+  --animate-tenth: color 1.9s ease-in-out infinite;
+  --animate-eleventh: color 2s ease-in-out infinite;
+  --animate-12: color 2.1s ease-in-out infinite;
+  --animate-13: color 2.2s ease-in-out infinite;
+  --animate-14: color 2.3s ease-in-out infinite;
+  --animate-15: color 2.4s ease-in-out infinite;
+  --animate-16: color 2.5s ease-in-out infinite;
+  --animate-17: color 2.6s ease-in-out infinite;
+  --animate-18: color 2.7s ease-in-out infinite;
+  --animate-19: color 2.8s ease-in-out infinite;
+  --animate-20: color 2.9s ease-in-out infinite;
+  --animate-21: color 3s ease-in-out infinite;
+  --animate-22: color 3.1s ease-in-out infinite;
+  --animate-23: color 3.2s ease-in-out infinite;
+  --animate-24: color 3.3s ease-in-out infinite;
+  @keyframes color {
+    0%,
+    10% {
+      color: purple;
+    }
+    100% {
+      color: inherit;
+    }
+  }
+  --animate-wiggle: wiggle 2s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+  }
+  --animate-wiggle-reverse: wiggle-reverse 2s ease-in-out infinite;
+  @keyframes wiggle-reverse {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(23deg);
+    }
+  }
 }
 
 @layer base {
