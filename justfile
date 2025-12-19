@@ -75,6 +75,7 @@ build-zola:
     #!/bin/bash
     zola build
 
+# Build the site and static assets.
 [group("Build")]
 build:
     #!/bin/bash
@@ -92,7 +93,9 @@ deploy-local:
 # Builds the x86 docker image and tags it with the registry location
 [private]
 build-kube:
-    docker build --tag registry:5001/the_peach:${TAG:-latest} --file Dockerfile .
+    #!/bin/bash
+    : ${TAG=$(yq '.' version)}
+    docker build --tag registry:5001/the_peach:${TAG} --file Dockerfile .
 
 # Checks if the version in `./version` is already the version specified in the 
 # kube-deployment file. If so, requests a new version, updates the version file
@@ -120,8 +123,6 @@ check-current-version:
 
         # Check that the version inputted matches the semver style.
         if [[ $NEW_VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            # Update the TAG variable.
-            export TAG=$NEW_VERSION
             # Replace what's in the version file with the new version.
             echo "$NEW_VERSION" > ./version
         else
@@ -169,8 +170,6 @@ upload-kube:
 [group('Deploy')]
 deploy:
     #!/bin/bash
-    export TAG=$(yq '.' version)
-
     # Upload the latest build of the image to the internal registry, then
     # update the tag in the kube config file, send it to node0, then apply it.
     # User must be in the deploygrp on node0 to be able to create files there!
@@ -179,7 +178,7 @@ deploy:
         && just deploy-kube
 
 # Updates the kube-deployment file, then applies it.
-[private]
+[group('Deploy')]
 deploy-kube:
     #!/bin/bash
     : ${TAG=$(yq '.' version)}

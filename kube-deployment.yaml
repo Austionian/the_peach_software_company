@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: the-peach-software-company
-          image: 10.108.202.38:5000/the_peach:0.3.0
+          image: 10.108.202.38:5000/the_peach:0.12.0
       restartPolicy: Always
 ---
 apiVersion: v1

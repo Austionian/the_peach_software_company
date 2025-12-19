@@ -14,9 +14,9 @@
   --animate-sixth: color 1.5s ease-in-out infinite;
   --animate-seventh: color 1.6s ease-in-out infinite;
   --animate-eigth: color 1.7s ease-in-out infinite;
-  --animate-ninth: color 1.8s ease-in-out infinite;
-  --animate-tenth: color 1.9s ease-in-out infinite;
-  --animate-eleventh: color 2s ease-in-out infinite;
+  --animate-9: color 1.8s ease-in-out infinite;
+  --animate-10: color 1.9s ease-in-out infinite;
+  --animate-11: color 2s ease-in-out infinite;
   --animate-12: color 2.1s ease-in-out infinite;
   --animate-13: color 2.2s ease-in-out infinite;
   --animate-14: color 2.3s ease-in-out infinite;
@@ -33,7 +33,7 @@
   @keyframes color {
     0%,
     10% {
-      color: purple;
+      color: teal;
     }
     100% {
       color: inherit;
@@ -46,7 +46,7 @@
       transform: rotate(0deg);
     }
     50% {
-      transform: rotate(-20deg);
+      transform: rotate(-3deg);
     }
   }
   --animate-wiggle-reverse: wiggle-reverse 2s ease-in-out infinite;
