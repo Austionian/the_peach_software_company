@@ -131,6 +131,24 @@ check-current-version:
         fi
     fi
 
+# Checks whether a Zola process is currently running. It's a good idea to 
+# stop that before deploying, commiting, etc.
+[private, no-exit-message]
+check-zola:
+    #!/bin/bash
+    if pgrep -x "zola" > /dev/null; then
+        echo "Looks like the dev server is still running..."
+        echo "Stop that process to build the changes before deploying."
+        echo ""
+        exit 1
+    fi
+
+# Pre-deploy checks
+[private]
+checks:
+    #!/bin/bash
+    just check-zola && just check-current-version
+
 # Updates the cluster's registry with the latest image
 [private]
 upload-kube:
@@ -173,7 +191,7 @@ deploy:
     # Upload the latest build of the image to the internal registry, then
     # update the tag in the kube config file, send it to node0, then apply it.
     # User must be in the deploygrp on node0 to be able to create files there!
-    just check-current-version \
+    just checks \
         && just upload-kube \
         && just deploy-kube
 
