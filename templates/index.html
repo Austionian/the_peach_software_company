@@ -104,39 +104,5 @@
       >
     </div>
 </div>
-<script>
-  document.getElementById("subtext").innerHTML = Array.from(
-    document.getElementById('subtext').innerText)
-      .map(
-        (ch, i) => `<span class="animate-${i + 1}">${ch}</span>`
-      ).join('')
-</script>
-<script>
-  (function () {
-    let topBar = document.getElementById("topbar");
-    let bottomBar = document.getElementById("bottombar");
-
-    if (!topBar && !bottomBar) return; // nothing to animate
-
-    function mutate(element) {
-      let txt = element.textContent;
-      let newTxt = "";
-      let length = window.innerWidth > 600 ? 50 : 20;
-      for (let i = 0; i < length; ++i) {
-        newTxt += Math.random() < 0.5 ? "\\" : "/";
-      }
-      element.textContent = newTxt;
-    }
-
-    // Run the mutation immediately for each existing element
-    if (topBar) mutate(topBar);
-    if (bottomBar) mutate(bottomBar);
-
-    // Then repeat every second
-    setInterval(function () {
-      if (topBar) mutate(topBar);
-      if (bottomBar) mutate(bottomBar);
-    }, 500);
-  })();
-</script>
+<script src="{{ get_url(path='assets/js/animate.js') | safe }}" />
 {% endblock content %}
