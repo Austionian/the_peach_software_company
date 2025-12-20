@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <title>the peach software company</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#02050e" />
     <meta charset="utf-8" />
     <meta
       name="description"
@@ -34,7 +35,7 @@
     <link rel="manifest" href="{{ get_url(path="assets/site.webmanifest") | safe }}" />
     <link rel="stylesheet" href="{{ get_url(path="styles/styles.css") | safe }}" />
   </head>
-  <body class="bg-black text-[#ed1477] leading-relaxed font-mono">
-    <div style="z-index: 100;"class="z-50 max-w-3xl w-full m-auto">{% block content %} {% endblock %}</div>
+  <body class="bg-black text-white/85 leading-relaxed font-mono" style="min-height: calc(100vh + env(safe-area-inset-top));">
+    <div class="z-50 max-w-3xl w-full m-auto">{% block content %} {% endblock %}</div>
   </body>
 </html>
