@@ -2,11 +2,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-400: oklch(0.82 0.11 356.9);
-  --color-primary-500: oklch(0.74 0.14 358.14);
-
-  --color-secondary-500: oklch(0.72 0.1 261.44);
-
   --animate-1: color 1s ease-in-out infinite;
   --animate-2: color 1.1s ease-in-out infinite;
   --animate-3: color 1.2s ease-in-out infinite;
@@ -45,30 +40,10 @@
   @keyframes color {
     0%,
     10% {
-      color: var(--color-gray-600);
+      color: var(--color-slate-600);
     }
     30% {
       color: inherit;
-    }
-  }
-  --animate-wiggle: wiggle 2s ease-in-out infinite;
-  @keyframes wiggle {
-    0%,
-    100% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(-3deg);
-    }
-  }
-  --animate-wiggle-reverse: wiggle-reverse 2s ease-in-out infinite;
-  @keyframes wiggle-reverse {
-    0%,
-    100% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(23deg);
     }
   }
 }
