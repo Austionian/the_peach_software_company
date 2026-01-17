@@ -1,108 +1,237 @@
 {% extends "base.html" %} {% block content %}
 <div
   style="hight: 110vh"
-  class="fixed z-[-1] text-slate-500/20 top-0 left-[-6rem] text-[9px] sm:text-[1rem]"
+  class="fixed z-[-1] text-pink-500/20 top-0 left-[-6rem] text-[9px] sm:text-[1rem]"
 >
   {% include "ascii.html" %}
 </div>
 <div
-  class="fixed z-[-1] text-slate-500/20 top-[.2rem] left-[-5.8rem] text-[9px] sm:text-[1rem]"
+  class="fixed z-[-1] text-pink-500/20 top-[.2rem] left-[-5.8rem] text-[9px] sm:text-[1rem]"
 >
   {% include "ascii.html" %}
 </div>
 <div
-  class="fixed z-[-1] text-emerald-300/20 top-[.4rem] left-[-5.6rem] text-[9px] sm:text-[1rem]"
+  class="fixed z-[-1] text-amber-500/20 top-[.4rem] left-[-5.6rem] text-[9px] sm:text-[1rem]"
 >
   {% include "ascii.html" %}
 </div>
 <div
-  class="fixed z-[-1] text-emerald-400/20 top-[.6rem] left-[-5.4rem] text-[9px] sm:text-[1rem]"
+  class="fixed z-[-1] text-pink-400/20 top-[.6rem] left-[-5.4rem] text-[9px] sm:text-[1rem]"
 >
   {% include "ascii.html" %}
 </div>
 <div
-  class="fixed z-[-1] text-slate-500/20 top-[.8rem] left-[-5.2rem] text-[9px] sm:text-[1rem]"
+  class="fixed z-[-1] text-pink-500/20 top-[.8rem] left-[-5.2rem] text-[9px] sm:text-[1rem]"
 >
   {% include "ascii.html" %}
 </div>
 <div
-  class="fixed z-[-1] text-slate-500/20 top-[1rem] left-[-5.0rem] text-[9px] sm:text-[1rem]"
+  class="fixed z-[-1] text-pink-500/20 top-[1rem] left-[-5.0rem] text-[9px] sm:text-[1rem]"
 >
   {% include "ascii.html" %}
 </div>
 <div
-  class="fixed z-[-1] text-slate-500/20 top-[1.2rem] left-[-4.8rem] text-[9px] sm:text-[1rem]"
+  class="fixed z-[-1] text-pink-500/20 top-[1.2rem] left-[-4.8rem] text-[9px] sm:text-[1rem]"
 >
   {% include "ascii.html" %}
 </div>
 <div
-  class="fixed z-[-1] text-slate-500/20 top-[1.4rem] left-[-4.6rem] text-[9px] sm:text-[1rem]"
+  class="fixed z-[-1] text-amber-500/20 top-[1.4rem] left-[-4.6rem] text-[9px] sm:text-[1rem]"
 >
   {% include "ascii.html" %}
 </div>
 <div
-  class="fixed z-[-1] text-emerald-400/20 top-[1.6rem] left-[-4.4rem] text-[9px] sm:text-[1rem]"
+  class="fixed z-[-1] text-pink-400/20 top-[1.6rem] left-[-4.4rem] text-[9px] sm:text-[1rem]"
 >
   {% include "ascii.html" %}
 </div>
 <div
-  class="flex flex-col items-center align-middle justify-center h-screen text-center sm:bg-black/5 rounded-2xl"
+  id="fade"
+  class="flex flex-col items-center align-middle justify-center h-screen text-center opacity-0"
 >
-  <div class="p-2 m-[-10px] ">
-    <img
-      src="{{ get_url(path="assets/theo_headshot.png") | safe }}" 
-      alt="headshot of a cat staring"
-      class="h-[45px] sm:h-[110px] relative top-[3.25rem] md:top-[5.25rem] left-[15.5rem] md:left-[39rem] rotate-[20deg] transition z-[2]"
-    />
-    <p
-      id="topbar"
-      class="whitespace-nowrap mb-2 sm:mb-6 text-white/75"
-    ></p>
-    <div class="relative rounded-2xl z-10">
-      <pre class="leading-[4px] sm:leading-[10px] text-[4px] sm:text-[10px]">
-      ▒▓████████▓▒▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░      ░▒▓███████▓▒░░▒▓████████▓▒░░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░      
-         ▒▓█▓▒   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      
-         ▒▓█▓▒   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░      
-         ▒▓█▓▒   ░▒▓████████▓▒░▒▓██████▓▒░        ░▒▓███████▓▒░░▒▓██████▓▒░ ░▒▓████████▓▒░▒▓█▓▒░      ░▒▓████████▓▒░      
-         ▒▓█▓▒   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░      
-         ▒▓█▓▒   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      
-         ▒▓█▓▒   ░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░      ░▒▓█▓▒░      ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░      
-
-
-       ░▒▓███████▓▒░░▒▓██████▓▒░░▒▓████████▓▒▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓███████▓▒░░▒▓████████▓▒░ 
-      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
-      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
-       ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓██████▓▒░   ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓███████▓▒░░▒▓██████▓▒░   
-             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
-             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
-      ░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░        ░▒▓█▓▒░    ░▒▓█████████████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░ 
-
-
-       ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓██████████████▓▒░░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░ 
-      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░  
-      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░     
-      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░     
-       ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░     
-
-      </pre>
-    </div>
-    <p id="bottombar" class="whitespace-nowrap text-white/75"></p>
-<p id="subtext" class="text-sm text-white/75"><span class="hidden sm:block">a software consultancy | </span>est. 2021</p>
-  </div>
-    <div class="mt-8 sm:mt-10 flex flex-col justify-between">
-      <a href="mailto:austin@r00ks.io">
-        <button
-          class="group/button ring-1 ring-orange-200/20 border-dashed border-1 hover:ring-emerald-500/20 group-hover:ring-emerald-500/30 inline-block cursor-pointer rounded-md px-4 py-3 text-center font-semibold transition duration-200 ease-in-out bg-black/5 hover:bg-emerald-500/10 text-sm hover:scale-110"
-        >
-          <span
-            class="group-hover/button:animate-none text-[1rem] sm:text-xl text-white/75 group-hover/button:text-emerald-300/85"
-            >GOT PEACH?</span
-          >
-        </button></a
+  <div class="p-2 m-[-10px]">
+    <a href="mailto:austin@r00ks.io">
+      <div
+        class="group relative rounded-2xl z-10 text-amber-400 transition hover:text-amber-500/75 text-[.5rem] sm:text-[1rem] mb-[-12rem] sm:mb-0"
       >
-    </div>
+        <pre>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⢀⠉⠳⠦⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣇⣂⣌⣐⢀⠂⡙⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣀⣤⠿⡛⣛⠛⡟⠻⢿⣿⣤⡠⠸⣧⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣤⠞⠭⢊⡒⡱⢨⠱⢌⢓⠢⣗⢎⠿⣷⣼⣆⣠⡴⠞⠛⡉⢉⠉⡉⠛⠛⠶⣤⣀⠀⠀
+⠀⠀⠀⣠⡞⠁⠀⣌⠱⢌⡡⢃⠞⡨⢌⣳⢍⣮⣷⡾⠟⡟⢻⠛⠿⣳⢶⣤⣆⡄⠡⠈⠄⠠⢉⣷⠂
+⠀⠀⣰⢯⠀⡄⢪⢄⢫⠰⡡⢍⡒⡱⣬⣷⢟⠫⣁⠖⡩⢌⡑⢎⡱⢂⢯⡜⣹⢻⣶⣅⢨⣰⠞⠁⠀
+⠀⢰⣏⢆⠣⠜⣡⢊⡔⠣⠜⢢⢼⣼⡟⠒⢎⡱⢌⢒⡱⠌⡜⢂⠖⡩⡘⣮⢱⢣⠞⡽⣿⠁⠀⠀⠀
+⠀⣿⡘⠤⢋⡜⡐⠦⢌⢣⡙⣼⠿⠊⠀⡜⡐⢆⠎⡒⢤⠋⡴⢉⠲⢡⡑⣏⢎⢧⡛⡴⣛⣷⠀⠀⠀
+⢀⡇⠣⢍⠲⡐⡍⣒⡉⠦⣼⠯⠃⢀⢊⠴⣉⠲⢌⡱⢊⡜⢰⠩⣘⢡⠒⣏⠞⣦⡙⢶⡡⢿⡆⠀⠀
+⠈⡇⢃⢎⡱⢘⡰⠡⡜⣱⡟⡡⢔⡡⢎⠒⣌⠲⢡⠒⡥⡘⢆⠓⡌⠦⣹⢭⡚⡴⣙⠦⣝⢺⡧⠀⠀
+⠀⣿⡌⡒⢬⢡⢒⡱⠌⣿⡅⠳⡨⢔⢊⡱⢂⡍⠦⢩⠔⣑⢊⡱⢌⡑⣏⠶⣙⠶⣩⠞⣬⢻⡇⠀⠀
+⠀⢸⣧⢉⠖⠢THEPEACHSOFTWARECOMPANY⡼⢎⡳⣍⠞⣥⢛⡴⣹⠃⠀⠀
+⠀⠀⢻⡎⡜⡡THEPEACHSOFTWARECOMPANY⣙⢮⡱⢎⡝⢦⣋⢶⡏⠀⠀⠀
+⠀⠀⠀⢻⣖⡡THEPEACHSOFTWARECOMPANY⣩⢖⡹⢎⡜⣣⢾⡟⠀⠀⠀⠀
+⠀⠀⠀⠀⠹⣶⡡⠍⡆⡓⠴⡘⡌⠦⣘⠒⡤⢋⡜⣡⡜⢮⠳⣍⢞⡱⢎⡵⢫⣜⣵⠋⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⢿⣞⡴⢭⣒⣡⢎⡑⢦⡍⣖⢣⡝⢦⣙⢎⡳⡜⢮⡱⢫⣼⡵⠟⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠙⢷⣇⡞⡴⢫⡜⣣⠞⣬⠳⣜⢣⠞⣬⣓⣝⣦⡿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢷⣭⣷⣼⣥⣿⣶⠿⠾⠟⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      </pre
+        >
+        <pre
+          class="text-amber-300/25 relative top-[-16rem] left-[1rem] sm:top-[-32rem] sm:left-[1rem] group-hover:text-amber-400/25"
+        >
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⢀⠉⠳⠦⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣇⣂⣌⣐⢀⠂⡙⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣀⣤⠿⡛⣛⠛⡟⠻⢿⣿⣤⡠⠸⣧⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣤⠞⠭⢊⡒⡱⢨⠱⢌⢓⠢⣗⢎⠿⣷⣼⣆⣠⡴⠞⠛⡉⢉⠉⡉⠛⠛⠶⣤⣀⠀⠀
+⠀⠀⠀⣠⡞⠁⠀⣌⠱⢌⡡⢃⠞⡨⢌⣳⢍⣮⣷⡾⠟⡟⢻⠛⠿⣳⢶⣤⣆⡄⠡⠈⠄⠠⢉⣷⠂
+⠀⠀⣰⢯⠀⡄⢪⢄⢫⠰⡡⢍⡒⡱⣬⣷⢟⠫⣁⠖⡩⢌⡑⢎⡱⢂⢯⡜⣹⢻⣶⣅⢨⣰⠞⠁⠀
+⠀⢰⣏⢆⠣⠜⣡⢊⡔⠣⠜⢢⢼⣼⡟⠒⢎⡱⢌⢒⡱⠌⡜⢂⠖⡩⡘⣮⢱⢣⠞⡽⣿⠁⠀⠀⠀
+⠀⣿⡘⠤⢋⡜⡐⠦⢌⢣⡙⣼⠿⠊⠀⡜⡐⢆⠎⡒⢤⠋⡴⢉⠲⢡⡑⣏⢎⢧⡛⡴⣛⣷⠀⠀⠀
+⢀⡇⠣⢍⠲⡐⡍⣒⡉⠦⣼⠯⠃⢀⢊⠴⣉⠲⢌⡱⢊⡜⢰⠩⣘⢡⠒⣏⠞⣦⡙⢶⡡⢿⡆⠀⠀
+⠈⡇⢃⢎⡱⢘⡰⠡⡜⣱⡟⡡⢔⡡⢎⠒⣌⠲⢡⠒⡥⡘⢆⠓⡌⠦⣹⢭⡚⡴⣙⠦⣝⢺⡧⠀⠀
+⠀⣿⡌⡒⢬⢡⢒⡱⠌⣿⡅⠳⡨⢔⢊⡱⢂⡍⠦⢩⠔⣑⢊⡱⢌⡑⣏⠶⣙⠶⣩⠞⣬⢻⡇⠀⠀
+⠀⢸⣧⢉⠖⠢⣅⠲⡉⢆⡜⣡⢑⡊⠦⣑⢊⠴⣉⠲⡘⠤⣃⠲⢌⡼⢎⡳⣍⠞⣥⢛⡴⣹⠃⠀⠀
+⠀⠀⢻⡎⡜⡡⢆⢣⢉⢆⠲⢄⠣⠜⡡⢆⡩⢒⢌⡱⢌⢃⠦⣉⡶⣙⢮⡱⢎⡝⢦⣋⢶⡏⠀⠀⠀
+⠀⠀⠀⢻⣖⡡⢎⠢⢍⠢⡍⡜⢌⢣⡑⠦⣑⠪⠔⡒⡌⢎⡴⣋⠶⣩⢖⡹⢎⡜⣣⢾⡟⠀⠀⠀⠀
+⠀⠀⠀⠀⠹⣶⡡⠍⡆⡓⠴⡘⡌⠦⣘⠒⡤⢋⡜⣡⡜⢮⠳⣍⢞⡱⢎⡵⢫⣜⣵⠋⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⢿⣞⡴⢭⣒⣡⢎⡑⢦⡍⣖⢣⡝⢦⣙⢎⡳⡜⢮⡱⢫⣼⡵⠟⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠙⢷⣇⡞⡴⢫⡜⣣⠞⣬⠳⣜⢣⠞⣬⣓⣝⣦⡿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢷⣭⣷⣼⣥⣿⣶⠿⠾⠟⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+</pre
+        >
+      </div>
+    </a>
+    <p class="hidden sm:block sm:text-sm text-gray-300/75 whitespace-nowrap">
+      a software consultancy | est. 2021
+    </p>
+    <p class="sm:hidden text-xs text-gray-300/75 whitespace-nowrap">
+      est. 2021
+    </p>
+  </div>
 </div>
-<script src="{{ get_url(path='assets/js/animate.js') | safe }}" ></script>
+<script>
+  console.log("WELCOME");
+  console.log(`
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⢀⠉⠳⠦⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣇⣂⣌⣐⢀⠂⡙⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣀⣤⠿⡛⣛⠛⡟⠻⢿⣿⣤⡠⠸⣧⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣤⠞⠭⢊⡒⡱⢨⠱⢌⢓⠢⣗⢎⠿⣷⣼⣆⣠⡴⠞⠛⡉⢉⠉⡉⠛⠛⠶⣤⣀⠀⠀
+⠀⠀⠀⣠⡞⠁⠀⣌⠱⢌⡡⢃⠞⡨⢌⣳⢍⣮⣷⡾⠟⡟⢻⠛⠿⣳⢶⣤⣆⡄⠡⠈⠄⠠⢉⣷⠂
+⠀⠀⣰⢯⠀⡄⢪⢄⢫⠰⡡⢍⡒⡱⣬⣷⢟⠫⣁⠖⡩⢌⡑⢎⡱⢂⢯⡜⣹⢻⣶⣅⢨⣰⠞⠁⠀
+⠀⢰⣏⢆⠣⠜⣡⢊⡔⠣⠜⢢⢼⣼⡟⠒⢎⡱⢌⢒⡱⠌⡜⢂⠖⡩⡘⣮⢱⢣⠞⡽⣿⠁⠀⠀⠀
+⠀⣿⡘⠤⢋⡜⡐⠦⢌⢣⡙⣼⠿⠊⠀⡜⡐⢆⠎⡒⢤⠋⡴⢉⠲⢡⡑⣏⢎⢧⡛⡴⣛⣷⠀⠀⠀
+⢀⡇⠣⢍⠲⡐⡍⣒⡉⠦⣼⠯⠃⢀⢊⠴⣉⠲⢌⡱⢊⡜⢰⠩⣘⢡⠒⣏⠞⣦⡙⢶⡡⢿⡆⠀⠀
+⠈⡇⢃⢎⡱⢘⡰⠡⡜⣱⡟⡡⢔⡡⢎⠒⣌⠲⢡⠒⡥⡘⢆⠓⡌⠦⣹⢭⡚⡴⣙⠦⣝⢺⡧⠀⠀
+⠀⣿⡌⡒⢬⢡⢒⡱⠌⣿⡅⠳⡨⢔⢊⡱⢂⡍⠦⢩⠔⣑⢊⡱⢌⡑⣏⠶⣙⠶⣩⠞⣬⢻⡇⠀⠀
+⠀⢸⣧⢉⠖⠢THEPEACHSOFTWARECOMPANY⡼⢎⡳⣍⠞⣥⢛⡴⣹⠃⠀⠀
+⠀⠀⢻⡎⡜⡡THEPEACHSOFTWARECOMPANY⣙⢮⡱⢎⡝⢦⣋⢶⡏⠀⠀⠀
+⠀⠀⠀⢻⣖⡡THEPEACHSOFTWARECOMPANY⣩⢖⡹⢎⡜⣣⢾⡟⠀⠀⠀⠀
+⠀⠀⠀⠀⠹⣶⡡⠍⡆⡓⠴⡘⡌⠦⣘⠒⡤⢋⡜⣡⡜⢮⠳⣍⢞⡱⢎⡵⢫⣜⣵⠋⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⢿⣞⡴⢭⣒⣡⢎⡑⢦⡍⣖⢣⡝⢦⣙⢎⡳⡜⢮⡱⢫⣼⡵⠟⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠙⢷⣇⡞⡴⢫⡜⣣⠞⣬⠳⣜⢣⠞⣬⣓⣝⣦⡿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢷⣭⣷⣼⣥⣿⣶⠿⠾⠟⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+`);
+</script>
+<style>
+  #fade {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.1s linear; /* smooth fade */
+  }
+</style>
+<script>
+  (function () {
+    const el = document.getElementById("fade");
+
+    // Helper that clamps a number between min and max
+    const clamp = (v, min = 0, max = 1) => Math.min(Math.max(v, min), max);
+
+    const onScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const viewportH =
+        window.innerHeight || document.documentElement.clientHeight;
+      const docH = document.documentElement.scrollHeight;
+
+      // The maximum value that scrollTop can reach
+      const maxScrollTop = docH - viewportH;
+
+      // Prevent division by zero on very short pages
+      if (maxScrollTop <= 0) {
+        el.style.opacity = "1";
+        return;
+      }
+
+      const progress = clamp(scrollTop / maxScrollTop);
+      el.style.opacity = progress.toString(); // opacity is a string 0‑1
+    };
+
+    // Attach the listener – use passive to improve scrolling performance
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Fire once in case the page loads scrolled (e.g., from anchor)
+    onScroll();
+  })();
+  (function () {
+    // Helper that clamps a number between min and max
+    const clamp = (v, min = 0, max = 1) => Math.min(Math.max(v, min), max);
+    const el = document.getElementById("fadeOut");
+    const onScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const viewportH =
+        window.innerHeight || document.documentElement.clientHeight;
+      const docH = document.documentElement.scrollHeight;
+      const maxScrollTop = Math.max(docH - viewportH, 1);
+
+      const progress = clamp(scrollTop / maxScrollTop);
+      el.style.opacity = (1 - progress).toString(); // 1 → 0
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+<script>
+  (function () {
+    const banner = document.createElement("div");
+    banner.innerHTML = "^";
+    Object.assign(banner.style, {
+      position: "fixed",
+      left: "50%",
+      bottom: "-30px", // start hidden below viewport
+      transform: "translateX(-50%)",
+      fontSize: "36px",
+      color: "#ffffff",
+      backgroundColor: "rgba(0,0,0,.2)",
+      borderRadius: "8px",
+      padding: "0 16px",
+      pointerEvents: "none",
+      animation: "slideUp 1.5s ease-in-out infinite",
+    });
+
+    // Keyframes for the slide‑up pulse
+    const style = document.createElement("style");
+    style.textContent = `
+      @keyframes slideUp {
+        0%   { bottom:-30px;}
+        50%  { bottom:10px;}
+        100% { bottom:-30px;}
+      }
+    `;
+    document.head.appendChild(style);
+    document.body.appendChild(banner);
+
+    // Hide when the page is scrolled
+    const hide = () => {
+      banner.style.animationPlayState = "paused";
+      banner.style.opacity = "0";
+      window.removeEventListener("scroll", hide, { once: true });
+    };
+    window.addEventListener("scroll", hide, { once: true });
+  })();
+</script>
 {% endblock content %}
